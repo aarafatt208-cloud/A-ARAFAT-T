@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-cinzel: 'Cinzel', serif;
+    --font-outfit: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #050508;
+    color: #f1f5f9;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-outfit);
+  }
+
+  .font-cinema {
+    font-family: var(--font-cinzel);
+  }
+
+  .font-mono-num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom scrollbar for streaming platform */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07070c;
+}
+::-webkit-scrollbar-thumb {
+  background: #232334;
+  border-radius: 9999px;
+  border: 2px solid #07070c;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b3a58;
+}
+
+/* Cinematic glows & shimmer */
+@keyframes ambientGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1) translate(0px, 0px);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1) translate(20px, -15px);
+  }
+}
+
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-ambient-glow {
+  animation: ambientGlow 12s ease-in-out infinite;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF6D6 0%, #F59E0B 45%, #D97706 70%, #FDE68A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cyber-gradient-text {
+  background: linear-gradient(135deg, #38BDF8 0%, #818CF8 50%, #C084FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Range input styling for sleek video player */
+input[type="range"] {
+  accent-color: #f59e0b;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Cinemora - Ultra Premium Cinematic Streaming",
+  "description": "Ultra-premium futuristic cinematic video streaming and animation platform with custom HTML5 player, personal library, category filters, and motion effects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
